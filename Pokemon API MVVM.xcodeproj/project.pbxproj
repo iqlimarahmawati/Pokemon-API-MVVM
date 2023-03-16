@@ -18,6 +18,7 @@
 		36452BE729C1B8EF00565F6C /* PokemonListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36452BE529C1B8EF00565F6C /* PokemonListCollectionViewCell.xib */; };
 		36452BE929C1BC4300565F6C /* typePokemonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36452BE829C1BC4300565F6C /* typePokemonViewModel.swift */; };
 		3645978829C2A3F00042FFEF /* TypePokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3645978729C2A3F00042FFEF /* TypePokemonViewController.swift */; };
+		3645979629C2D7770042FFEF /* SDWebImageLinkPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 3645979529C2D7770042FFEF /* SDWebImageLinkPlugin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3645979629C2D7770042FFEF /* SDWebImageLinkPlugin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +156,9 @@
 			dependencies = (
 			);
 			name = "Pokemon API MVVM";
+			packageProductDependencies = (
+				3645979529C2D7770042FFEF /* SDWebImageLinkPlugin */,
+			);
 			productName = "Pokemon API MVVM";
 			productReference = 36452BC229C1B35E00565F6C /* Pokemon API MVVM.app */;
 			productType = "com.apple.product-type.application";
@@ -182,6 +187,9 @@
 				Base,
 			);
 			mainGroup = 36452BB929C1B35E00565F6C;
+			packageReferences = (
+				3645979429C2D7770042FFEF /* XCRemoteSwiftPackageReference "SDWebImageLinkPlugin" */,
+			);
 			productRefGroup = 36452BC329C1B35E00565F6C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -432,6 +440,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3645979429C2D7770042FFEF /* XCRemoteSwiftPackageReference "SDWebImageLinkPlugin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageLinkPlugin.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3645979529C2D7770042FFEF /* SDWebImageLinkPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3645979429C2D7770042FFEF /* XCRemoteSwiftPackageReference "SDWebImageLinkPlugin" */;
+			productName = SDWebImageLinkPlugin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 36452BBA29C1B35E00565F6C /* Project object */;
 }

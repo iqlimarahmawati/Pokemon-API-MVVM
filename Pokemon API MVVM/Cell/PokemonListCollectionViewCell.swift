@@ -12,11 +12,19 @@ class PokemonListCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var bgView: UIView!
     
    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        setupCell()
+    }
+    
+    func setupCell() {
+        bgView.layer.backgroundColor = UIColor.white.cgColor
+        bgView.layer.borderWidth = 1.0
+        bgView.layer.borderColor = UIColor.black.cgColor
+    
     }
 
 }

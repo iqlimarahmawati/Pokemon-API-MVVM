@@ -11,7 +11,6 @@ struct TypePokeModel: Codable {
     let  results : [Results]
 }
 
-
 struct Results: Codable {
     var name : String
     var url : String
