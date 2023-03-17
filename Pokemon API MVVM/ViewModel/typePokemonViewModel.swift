@@ -11,32 +11,43 @@ protocol TypePokemonViewModelProtocol {
     var urlString : String { get }
     var bindTypePokemonData : ((TypePokeModel?)->())? {get set}
     func fetchDataPokemon()
-    
-
 }
 
 class TypePokemonViewModel: TypePokemonViewModelProtocol {
     
-    private var apiService : GetPokemonApi?
+    private var apiService : ApiServicePokemonProtocol?
     var urlString: String
     var data : TypePokeModel?
     
     var bindTypePokemonData: ((TypePokeModel?) -> ())?
 
     
-    init(urlString : String) {
+    init(urlString : String, apiService: ApiServicePokemonProtocol) {
         self.urlString = urlString
-        self.apiService = GetPokemonApi(url: self.urlString)
+        self.apiService = apiService
+        
+        if let url = URL(string: urlString) {
+            self.apiService?.get(url: url)
+        }
         
         fetchDataPokemon()
     }
     
-        func fetchDataPokemon() {
-            self.apiService?.callApi(completion: {response in
-                if let dataResponse = response {
-                    self.data = dataResponse
-                    self.bindTypePokemonData?(dataResponse)
-                }else {
+//        func fetchDataPokemon() {
+//            self.apiService?.callApi(model: TypePokeModel, completion: {response in
+//                if let dataResponse = response {
+//                    self.data = dataResponse
+//                    self.bindTypePokemonData?(dataResponse)
+//                }else {
+//                    self.bindTypePokemonData?(nil)
+//                }
+//            })
+            func fetchDataPokemon() {
+            self.apiService?.callApi(model: TypePokeModel.self, completion: { response in
+                switch response {
+                case .success(let success):
+                    self.bindTypePokemonData?(success)
+                case .failure(_):
                     self.bindTypePokemonData?(nil)
                 }
             })
@@ -44,6 +55,11 @@ class TypePokemonViewModel: TypePokemonViewModelProtocol {
     
     
     
+    
+    
+    
+    
+
     
 //    private var apiService : ApiServicePokemonProtocol?
 //    var urlString: String = ""

@@ -18,7 +18,7 @@ class TypePokemonViewController: UIViewController, UICollectionViewDelegate, UIC
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpPokemon()
-        self.viewModel = TypePokemonViewModel(urlString : "https://pokeapi.co/api/v2/pokemon")
+        self.viewModel = TypePokemonViewModel(urlString : "https://pokeapi.co/api/v2/pokemon", apiService: GetPokemonApi())
         
         
         self.viewModel?.bindTypePokemonData = {pokemonDataListModel in
@@ -27,7 +27,7 @@ class TypePokemonViewController: UIViewController, UICollectionViewDelegate, UIC
                 self.pokemon = pokemonDataListModel
                 self.collectionView.backgroundColor = .white
             } else {
-                self.collectionView.backgroundColor = .red
+                self.collectionView.backgroundColor = .white
             }
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
@@ -35,7 +35,6 @@ class TypePokemonViewController: UIViewController, UICollectionViewDelegate, UIC
         }
        
     }
-    
     
     func setUpPokemon() {
         collectionView.collectionViewLayout = setUpPokemonCellFlowLayout()
@@ -75,5 +74,15 @@ class TypePokemonViewController: UIViewController, UICollectionViewDelegate, UIC
         return count
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "PokemonDetailsViewController") as! PokemonDetailsViewController
+        viewController.pokemon = self.pokemon?.results[indexPath.row]
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
     }
 
+// cara add Package
+//file -> add packages/ swift packages -> copy paste url nya -> jangan lupa import
+// contoh mau add packages SDWeb atau Algoritma, copy pastenya di add packages seetelah itu import di viewController lalu panggil link githubnya
