@@ -71,6 +71,7 @@ extension PokemonDetailsViewController: UITableViewDataSource, UITableViewDelega
         
         cell.nameLabel.text = detailPokemon?.name
         cell.statLabel.text = "\(String(describing: detailPokemon?.stats[0].baseStat ?? 0))"
+        cell.spritesImage.sd_setImage(with: URL(string: (detailPokemon?.sprites.frontDefault)!))
         return cell
     }
     

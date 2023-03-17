@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocx-tq-Vgk">
-                        <rect key="frame" x="16" y="8" width="257" height="21"/>
+                        <rect key="frame" x="16" y="8" width="257" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -29,7 +29,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ym4-N5-hA7">
-                        <rect key="frame" x="36" y="59" width="248" height="128"/>
+                        <rect key="frame" x="36" y="58.5" width="248" height="128"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="128" id="chS-VH-kBH"/>
                         </constraints>
@@ -38,6 +38,7 @@
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="ym4-N5-hA7" secondAttribute="trailing" constant="20" id="4BM-Pf-BhX"/>
                     <constraint firstItem="ym4-N5-hA7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="4Rs-PW-j7v"/>
+                    <constraint firstAttribute="bottom" secondItem="ym4-N5-hA7" secondAttribute="bottom" priority="250" constant="16" id="6ZO-kW-CGY"/>
                     <constraint firstItem="0ty-BM-1hD" firstAttribute="leading" secondItem="Ocx-tq-Vgk" secondAttribute="trailing" constant="8" symbolic="YES" id="FgY-Zg-DeV"/>
                     <constraint firstItem="Ocx-tq-Vgk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="O3e-GT-FeR"/>
                     <constraint firstItem="ym4-N5-hA7" firstAttribute="top" secondItem="Ocx-tq-Vgk" secondAttribute="bottom" constant="30" id="YYR-pD-znB"/>
