@@ -13,6 +13,8 @@ struct PokemonDetailModel: Codable{
     let moves: [MoveElement]
     let sprites: Sprites
     let stats: [Stat]
+//    let accuracy: Int?
+//    let power: Int?
 }
  struct MoveElement: Codable {
     let move: StatClass

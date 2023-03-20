@@ -17,9 +17,10 @@ class TypePokemonViewController: UIViewController, UICollectionViewDelegate, UIC
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Pokemon"
         setUpPokemon()
         self.viewModel = TypePokemonViewModel(urlString : "https://pokeapi.co/api/v2/pokemon", apiService: GetPokemonApi())
-        
         
         self.viewModel?.bindTypePokemonData = {pokemonDataListModel in
             print("this is the data: \(pokemonDataListModel)")

@@ -22,18 +22,20 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="300" verticalHuggingPriority="200" misplaced="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="WXC-ge-eHO">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="128"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LY2-mw-3mj">
-                                <rect key="frame" x="16" y="136" width="42" height="21"/>
+                                <rect key="frame" x="16" y="136" width="44.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="H39-sW-MpN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" systemColor="systemPinkColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="WXC-ge-eHO" secondAttribute="trailing" id="449-F7-li0"/>
                             <constraint firstItem="LY2-mw-3mj" firstAttribute="leading" secondItem="uAx-a4-WYO" secondAttribute="leading" constant="16" id="Hwl-WB-5cy"/>
@@ -65,6 +67,12 @@
         <image name="placeholder" width="80" height="60"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
