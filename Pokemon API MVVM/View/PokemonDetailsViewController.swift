@@ -104,16 +104,11 @@ extension PokemonDetailsViewController: UITableViewDataSource, UITableViewDelega
             return detailPokemon?.moves.count ?? 0
         default:
             return 1
-            //        case 1:
-            //            return 3
-            //        }
+    
         }
-        
 
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2    }
-    
-
 }

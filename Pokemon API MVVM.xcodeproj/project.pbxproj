@@ -28,7 +28,6 @@
 		36BC11B229C7FB7900E985E8 /* PokemonMoveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BC11B129C7FB7900E985E8 /* PokemonMoveViewModel.swift */; };
 		36BC11BA29C801A800E985E8 /* PokemonMoveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BC11B829C801A800E985E8 /* PokemonMoveTableViewCell.swift */; };
 		36BC11BB29C801A800E985E8 /* PokemonMoveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BC11B929C801A800E985E8 /* PokemonMoveTableViewCell.xib */; };
-		36BC11BD29C802C700E985E8 /* PokemonMoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BC11BC29C802C700E985E8 /* PokemonMoveViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,7 +53,6 @@
 		36BC11B129C7FB7900E985E8 /* PokemonMoveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonMoveViewModel.swift; sourceTree = "<group>"; };
 		36BC11B829C801A800E985E8 /* PokemonMoveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonMoveTableViewCell.swift; sourceTree = "<group>"; };
 		36BC11B929C801A800E985E8 /* PokemonMoveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonMoveTableViewCell.xib; sourceTree = "<group>"; };
-		36BC11BC29C802C700E985E8 /* PokemonMoveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonMoveViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,7 +162,6 @@
 			children = (
 				3645978729C2A3F00042FFEF /* TypePokemonViewController.swift */,
 				364597A829C429C70042FFEF /* PokemonDetailsViewController.swift */,
-				36BC11BC29C802C700E985E8 /* PokemonMoveViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,7 +306,6 @@
 				36BC11B229C7FB7900E985E8 /* PokemonMoveViewModel.swift in Sources */,
 				364597A329C401D80042FFEF /* PokemonDetailsTableViewCell.swift in Sources */,
 				36452BC629C1B35E00565F6C /* AppDelegate.swift in Sources */,
-				36BC11BD29C802C700E985E8 /* PokemonMoveViewController.swift in Sources */,
 				36452BC829C1B35E00565F6C /* SceneDelegate.swift in Sources */,
 				36BC11BA29C801A800E985E8 /* PokemonMoveTableViewCell.swift in Sources */,
 				36452BDB29C1B41500565F6C /* PokeApiModel.swift in Sources */,

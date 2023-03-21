@@ -8,7 +8,7 @@
 import Foundation
 
 
-// jadi pakai generic type
+// jadi pakai generic type gajadi pakai single responsibilyty
 protocol ApiServicePokemonProtocol {
     
     mutating func get(url: URL)

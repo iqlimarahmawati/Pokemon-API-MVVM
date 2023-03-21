@@ -11,21 +11,21 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PokemonListCollectionViewCell" customModule="Pokemon_API_MVVM" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="236" height="215"/>
+            <rect key="frame" x="0.0" y="0.0" width="236" height="174"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="236" height="215"/>
+                <rect key="frame" x="0.0" y="0.0" width="236" height="174"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uAx-a4-WYO">
-                        <rect key="frame" x="0.0" y="0.0" width="236" height="215"/>
+                        <rect key="frame" x="0.0" y="0.0" width="236" height="174"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="300" verticalHuggingPriority="200" misplaced="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="WXC-ge-eHO">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="128"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LY2-mw-3mj">
-                                <rect key="frame" x="16" y="136" width="44.5" height="21"/>
+                                <rect key="frame" x="16" y="95" width="44.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="H39-sW-MpN"/>
                                 </constraints>
@@ -54,13 +54,13 @@
                 <constraint firstItem="uAx-a4-WYO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cmX-F8-tM2"/>
                 <constraint firstAttribute="bottom" secondItem="uAx-a4-WYO" secondAttribute="bottom" id="zdy-Hr-9EY"/>
             </constraints>
-            <size key="customSize" width="236" height="215"/>
+            <size key="customSize" width="236" height="174"/>
             <connections>
                 <outlet property="bgView" destination="uAx-a4-WYO" id="ugT-Bz-cV9"/>
                 <outlet property="image" destination="WXC-ge-eHO" id="a8T-7T-b5c"/>
                 <outlet property="nameLabel" destination="LY2-mw-3mj" id="SmF-kV-sUT"/>
             </connections>
-            <point key="canvasLocation" x="-305.79710144927537" y="11.71875"/>
+            <point key="canvasLocation" x="-305.79710144927537" y="-2.0089285714285712"/>
         </collectionViewCell>
     </objects>
     <resources>

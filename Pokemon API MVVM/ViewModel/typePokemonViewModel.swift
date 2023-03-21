@@ -18,10 +18,9 @@ class TypePokemonViewModel: TypePokemonViewModelProtocol {
     private var apiService : ApiServicePokemonProtocol?
     var urlString: String
     var data : TypePokeModel?
-    
+
     var bindTypePokemonData: ((TypePokeModel?) -> ())?
 
-    
     init(urlString : String, apiService: ApiServicePokemonProtocol) {
         self.urlString = urlString
         self.apiService = apiService

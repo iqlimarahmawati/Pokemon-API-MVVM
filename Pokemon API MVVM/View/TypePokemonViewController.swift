@@ -20,7 +20,7 @@ class TypePokemonViewController: UIViewController, UICollectionViewDelegate, UIC
         
         title = "Pokemon"
         setUpPokemon()
-        self.viewModel = TypePokemonViewModel(urlString : "https://pokeapi.co/api/v2/pokemon", apiService: GetPokemonApi())
+        self.viewModel = TypePokemonViewModel(urlString : "https://pokeapi.co/api/v2/pokemon?limit=500", apiService: GetPokemonApi())
         
         self.viewModel?.bindTypePokemonData = {pokemonDataListModel in
             print("this is the data: \(pokemonDataListModel)")
