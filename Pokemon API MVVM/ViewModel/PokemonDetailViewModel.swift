@@ -45,7 +45,33 @@ class PokemonDetailViewModel: PokemonDetailViewModelProtocol {
         self.apiService?.callApi(model: PokemonDetailModel.self, completion: { response in
             switch response {
             case .success(let success):
-                self.bindDetailPokemonData?(success)
+                self.data = success
+                let group = DispatchGroup()
+                
+                for (index, move) in success.moves.enumerated(){
+                    group.enter()
+                    
+                    guard let url = URL(string: move.move.url) else {
+                        group.leave()
+                        continue
+                    }
+                    
+                    self.apiService?.get(url: url)
+                    self.apiService?.callApi(model: PokemonMoveModel.self, completion: { response in
+                        switch response {
+                        case .success(let moveDetail):
+                            self.data?.moves[index].move.moveDetail = moveDetail
+                        case .failure(_):
+                            self.bindDetailPokemonData?(nil)
+                        }
+                        group.leave()
+                    })
+                }
+                
+                group.notify(queue: DispatchQueue.main) {
+                    self.bindDetailPokemonData?(self.data)
+                }
+        
             case .failure(_):
                 self.bindDetailPokemonData?(nil)
             }

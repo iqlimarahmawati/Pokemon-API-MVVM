@@ -10,18 +10,19 @@ import Foundation
 struct PokemonDetailModel: Codable{
     let id:Int
     let name: String
-    let moves: [MoveElement]
+    var moves: [MoveElement]
     let sprites: Sprites
     let stats: [Stat]
 //    let accuracy: Int?
 //    let power: Int?
 }
  struct MoveElement: Codable {
-    let move: StatClass
+    var move: StatClass
 }
  struct StatClass: Codable {
      let name: String
      let url: String
+     var moveDetail: PokemonMoveModel?
  }
 struct Sprites: Codable {
     let frontDefault: String

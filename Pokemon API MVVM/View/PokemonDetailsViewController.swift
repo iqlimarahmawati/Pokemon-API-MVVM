@@ -16,8 +16,8 @@ class PokemonDetailsViewController: UIViewController {
     var viewModel: PokemonDetailViewModel?
     var detailPokemon: PokemonDetailModel?
     
-    //    var viewModel: PokemonMoveViewModel?
-    //    var movePokemon:PokemonMoveModel?
+        var moveViewModel: PokemonMoveViewModel?
+        var movePokemon:PokemonMoveModel?
     //    var pokemon : Results?
     
     var pokemonUrl: String = ""
@@ -60,6 +60,8 @@ class PokemonDetailsViewController: UIViewController {
         }
         
         
+        
+        
     }
     
     func setupTableView() {
@@ -84,8 +86,24 @@ extension PokemonDetailsViewController: UITableViewDataSource, UITableViewDelega
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PokemonMoveTableViewCell.identifier, for: indexPath) as? PokemonMoveTableViewCell else {
                 return UITableViewCell()}
 
+
+//            if let moveUrl = detailPokemon?.moves[indexPath.row].move.url {
+//                self.moveViewModel = PokemonMoveViewModel(urlString: moveUrl, apiService: GetPokemonApi())
+//            }
+            
+            guard let url = detailPokemon?.moves[indexPath.row].move.url else { return UITableViewCell()}
+    
+            self.moveViewModel = PokemonMoveViewModel(urlString: url, apiService: GetPokemonApi())
+            self.moveViewModel?.bindMovePokemonData = { move in
+                if let move = move {
+                    self.movePokemon = move
+                }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
             cell.PowerLabel.text = "\(String(describing: detailPokemon?.moves[indexPath.row].move.name ?? "" ))"
-//            cell.AccuracyLabel.text = "\(String(describing: detailPokemon?.moves.name ?? "" ))"
+            cell.AccuracyLabel.text = "\(String(describing: detailPokemon?.moves[indexPath.row].move.moveDetail?.accuracy ?? 0 ))"
             return cell
         default:
             break

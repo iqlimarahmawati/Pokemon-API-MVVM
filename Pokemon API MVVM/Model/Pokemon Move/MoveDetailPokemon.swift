@@ -8,12 +8,7 @@
 import Foundation
 
 struct PokemonMoveModel: Codable {
-    let accuracy: Int?
-    let power: Int?
-    
-enum CodingKeys: String, CodingKey {
-        case accuracy
-        case power
-    }
+    let accuracy: Int
+    let power: Int
 }
 
